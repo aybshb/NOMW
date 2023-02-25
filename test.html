@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Test App</title>
+</head>
+<link rel="stylesheet" type="text/css" href="test.css">
+<body class="center">
+<form action="test.php" method="post">
+
+<center>
+<h1>Pakathon: Aman/Civil Challenge Test App</h1>
+<h3>Developed by </h3>
+<h2>Dr. Muhammad Ali Shoaib</h2>
+
+
+<h3>This is a test version of the Web Application made, as a solution to Pakathon: Aman Foundation and Civil Hospital Challenge.<br>
+Please, fill this form and provide a valid email address(at the end of the page) to send/receive a patient alert.</h3> 
+<strong>Although this is a minimal design, all tables are crucial and designed to communicate summary of medical history and calculate 7 important triage/prognosis scores.
+However, if there is a lack of time and/or user wishes to communicate some specific information only, any number of fields can be skipped(without affecting submission process).</strong><br>
+<br> </br>
+<table class="center">
+<tr>
+<th colspan = "2">ID</th>
+</tr>
+<tr>
+<th>Name </th>
+<td> <input class="center" type="text" size="12" maxlength="12" name="name"></td>
+</tr>
+<tr>
+<th>Age </th>
+<td> <select name="age">
+<option value="Not Defined/Unknown"> </option>
+<option value="< 15">Less than 15</option>
+<option value="15-25">15-25</option>
+<option value="26-35">26-35</option>
+<option value="36-45">36-45</option>
+<option value="46-54">46-54</option>
+<option value="55-65">55-65</option>
+<option value="More than 65">More than 65</option></select></td>
+</tr>
+</table>
+
+<br> </br>
+
+<table class="center">
+<tr>
+<th colspan = "2">GENDER</th>
+</tr>
+<tr>
+<th>Male </th>
+<th>Female </th
+</tr>
+<tr>
+<td><input type="radio" value="Male" name="gender"></td>
+<td><input type="radio" value="Female" name="gender"></td>
+</tr>
+</table> 
+
+<br> </br>
+<table class="center">
+<tr>
+<th colspan = "4">VITALS</th>
+</tr>
+<tr>
+<th>Respiratory Rate(breaths/min)</th>
+<th>Systolic Blood Pressure(mm/Hg)</th>
+<th>Temperature </th>
+<th>Pulse </th>
+</tr>
+<tr>
+<td><select name="resp">
+<option value="u"> </option>
+<option value="0">0</option>
+<option value="1">1-5</option>
+<option value="2">6-9</option>
+<option value="4">10-29</option>
+<option value="3">30 or More</option></select>
+</td>
+<td><select name="bp">
+<option value="u"> </option>
+<option value="0">0</option>
+<option value="1">1-49</option>
+<option value="2">50-75</option>
+<option value="3">76-89</option>
+<option value="4">90 or More</option></select>
+</td>
+<td> <select name="temp">
+<option value="undefined"> </option>
+<option value="Normal">Normal</option>
+<option value="Fever">Fever</option>
+<option value="Hypothermia">Hypothermia</option></select>
+</td>
+<td><select name="pulse">
+<option value="undefined"> </option>
+<option value="0-15">0-15</option>
+<option value="16-35">16-35</option>
+<option value="36-60">36-60</option>
+<option value="61-100">61-100</option>
+<option value="100-120">100-120</option>
+<option value="More than 120">More than 120</option></select>
+</td>
+</tr>
+</table>
+<br> <br>
+
+<table class="center">
+<tr>
+<th colspan="4">SYMPTOMS</th>
+</tr>
+<tr>
+  <td> Abdominal Pain:<input type="checkbox" value="Abdominal Pain" name="symp[]">:</td>
+  <td> Diarrhea:<input type="checkbox" value="diarrhea" name="symp[]">:</td>
+  <td> Nausea:<input type="checkbox" value="Nausea" name="symp[]">:</td>
+  <td> Unconscious:<input type="checkbox" value="Unconscious" name="symp[]">:</td>
+<tr>
+
+<tr>
+  <td> Back Pain:<input type="checkbox" value="Back Pain" name="symp[]">:</td>
+  <td> Dizziness:<input type="checkbox" value="Dizziness" name="symp[]">:</td>
+  <td> Numbness:<input type="checkbox" value="Numbness" name="symp[]">:</td>
+  <td> Vaginal Bleed:<input type="checkbox" value="Vaginal Bleed" name="symp[]">:</td>
+<tr>
+
+<tr>
+  <td> Bleeding:<input type="checkbox" value="Bleeding" name="symp[]">:</td>
+  <td> Drowsiness:<input type="checkbox" value="Drowsiness" name="symp[]">:</td>
+  <td> Paralysis:<input type="checkbox" value="Paralysis" name="symp[]">:</td>
+  <td> Vomiting:<input type="checkbox" value="Vomiting" name="symp[]">:</td>
+<tr>
+
+<tr>
+  <td> Bloody Stool:<input type="checkbox" value="Bloody Stool" name="symp[]">:</td>
+  <td> Eye/Ear Pain:<input type="checkbox" value="Eye/Ear Pain" name="symp[]">:</td>
+  <td> Palpitations:<input type="checkbox" value="Palpitatipons" name="symp[]">:</td>
+  <td> Weakness/bodyache:<input type="checkbox" value="Weakness/bodyache" name="symp[]">:</td>
+<tr>
+
+<tr>
+  <td> Shortness of Breath:<input type="checkbox" value="Shortness of Breath" name="symp[]">:</td>
+  <td> Fever:<input type="checkbox" value="Fever" name="symp[]">:</td>
+  <td> Pregnancy/childbirth:<input type="checkbox" value="Pregnancy/Childbirth" name="symp[]">:</td>
+  <td> Unknown:<input type="checkbox" value="Unknown" name="symp[]">:</td>
+<tr>
+
+<tr>
+  <td> Cardiac Arrest:<input type="checkbox" value="Cardica Arrest" name="symp[]">:</td>
+  <td> Headace:<input type="checkbox" value="Headache" name="symp[]">:</td>
+  <td> Respiratory Arrest:<input type="checkbox" value="Respiratory Arrest" name="symp[]">:</td>
+  <td> Others:<input type="checkbox" value="Others" name="symp[]">:</td>
+<tr>
+
+<tr>
+  <td> Chest Pain:<input type="checkbox" value="Chest Pain" name="symp[]">:</td>
+  <td> Hypertension:<input type="checkbox" value="Hypertension" name="symp[]">:</td>
+  <td> Seizures/Convulsions:<input type="checkbox" value="Seizures/Convulsions" name="symp[]">:</td>
+  <td> None:<input type="checkbox" value="NONE" name="symp[]">:</td>
+<tr>
+<tr>
+  <td> Choking:<input type="checkbox" value="Choking" name="symp[]">:</td>
+  <td> Skin Condition:<input type="checkbox" value="Skin COndition" name="symp[]">:</td>
+  <td> Syncope/Fainting:<input type="checkbox" value="Syncope/Fainting" name="symp[]">:</td>
+  <td> If Others,Specify: <input type="text" size="12" maxlength="12" name="symp[]"> </td>
+<tr>
+</table>
+
+<br> </br>
+<table class="center">
+<tr>
+<th colspan = "3">GLASGOW COMA SCALE (GCS)</th>
+</tr>
+<tr>
+  <th> Eye Opens </th>
+  <th> Verbal  </th>
+  <th> Motor </th>
+</tr>
+<tr>
+  <td> Spontaneous:<input type="radio" value="4" name="eye">:  </td>
+  <td> Oriented:<input type="radio" value="5" name="verbal">:  </td>
+  <td> Obeys:<input type="radio" value="6" name="motor">:  </td>
+</tr>
+<tr>
+  <td> To Speach:<input type="radio" value="3" name="eye">:  </td>
+  <td> Disoriented:<input type="radio" value="4" name="verbal">:  </td>
+  <td> Localize Pain:<input type="radio" value="5" name="motor">:  </td>
+</tr>
+<tr>
+  <td> To Pain:<input type="radio" value="2" name="eye">:  </td>
+  <td> Inappropriate Words:<input type="radio" value="3" name="verbal">:  </td>
+  <td> Withdraws to Pain:<input type="radio" value="4" name="motor">:  </td>
+</tr>
+<tr>
+  <td> None:<input type="radio" value="1" name="eye">:  </td>
+  <td> Incomprhenesible:<input type="radio" value="2" name="verbal">:  </td>
+  <td> Flexion to Pain:<input type="radio" value="3" name="motor">:  </td>
+</tr>
+<tr>
+  <td> </td>
+  <td> None:<input type="radio" value="1" name="verbal">:  </td>
+  <td> Extends to Pain:<input type="radio" value="2" name="motor">:  </td>
+</tr>
+<tr>
+  <td> </td>
+  <td> </td>
+  <td> None:<input type="radio" value="1" name="motor">:  </td>
+</tr>
+</table>
+
+<br> </br>
+<strong>Abbreviated Injurt Scoring System (AIS) is a common classification tool for injury classification. Although, calculating exact AIS is complicated
+, this App uses the following simple scheme. This is an important step in calculating Injury Severity Score(ISS). Use appropriate region and drop down 
+menu to classify injury from Maximum to Minor or leave blank if not applicable to that particular anatomical region. </strong>
+<br> </br>
+<table class="center">
+<tr>
+<th colspan = "4">ABBREVIATED INJURY SCORE (AIS)</th>
+</tr>
+<tr>
+  <th> Head/Neck </th>
+  <th> Face  </th>
+  <th> Chest </th>
+  <th> External</th>
+</tr>
+
+<tr>
+  <td> <select name="head">
+<option value="0"> </option>
+<option value="1">Minor</option>
+<option value="2">Moderate</option>
+<option value="3">Serious</option>
+<option value="4">Severe</option>
+<option value="5">Critical</option>
+<option value="6">Maximum</option></select>:</td>
+
+  <td> <select name="face">
+<option value="0"> </option>
+<option value="1">Minor</option>
+<option value="2">Moderate</option>
+<option value="3">Serious</option>
+<option value="4">Severe</option>
+<option value="5">Critical</option>
+<option value="6">Maximum</option></select>:</td>
+
+
+
+  <td> <select name="chest">
+<option value="0"> </option>
+<option value="1">Minor</option>
+<option value="2">Moderate</option>
+<option value="3">Serious</option>
+<option value="4">Severe</option>
+<option value="5">Critical</option>
+<option value="6">Maximum</option></select>:</td>
+
+  <td> <select name="external">
+<option value="0"> </option>
+<option value="1">Minor</option>
+<option value="2">Moderate</option>
+<option value="3">Serious</option>
+<option value="4">Severe</option>
+<option value="5">Critical</option>
+<option value="6">Maximum</option></select>:</td>
+</tr>
+
+<tr>
+  <th colspan="2"> Extremities/pelvic girdle</th>
+  <th colspan="2"> Abdomen/pelvic contents </th>
+</tr>
+
+<tr>
+  <td colspan="2"> <select name="extremities">
+<option value="0"> </option>
+<option value="1">Minor</option>
+<option value="2">Moderate</option>
+<option value="3">Serious</option>
+<option value="4">Severe</option>
+<option value="5">Critical</option>
+<option value="6">Maximum</option></select>:</td>
+
+
+
+  <td colspan="2"> <select name="abdomen">
+<option value="0"> </option>
+<option value="1">Minor</option>
+<option value="2">Moderate</option>
+<option value="3">Serious</option>
+<option value="4">Severe</option>
+<option value="5">Critical</option>
+<option value="6">Maximum</option></select>:</td>
+</tr>
+
+</table>
+</br>
+
+<br> </br>
+<table class="center">
+<tr>
+<th colspan="3">CAUSE/MODE OF INJURY </th>
+</tr>
+<tr>
+  <td> Aircraft Related		:<input type="checkbox" value="Aircraft Related" name="injurycause[]">:</td>
+  <td> Excessive Heat		:<input type="checkbox" value="Excessive Heat" name="injurycause[]">:</td>
+  <td> Pedestrian Traffic	:<input type="checkbox" value="Pedestrian Traffic" name="injurycause[]">:</td>
+<tr>
+<tr>
+  <td> Atheletic Event		:<input type="checkbox" value="Atheletic Event" name="injurycause[]">:</td>
+  <td> Fall			:<input type="checkbox" value="Fall" name="injurycause[]">:</td>
+  <td> Physical Assault		:<input type="checkbox" value="Physical Assault" name="injurycause[]">:</td>
+<tr>
+<tr>
+  <td> Bicycle Crash		:<input type="checkbox" value="Bicycle Crash" name="injurycause[]">:</td>
+  <td> Fire			:<input type="checkbox" value="Fire" name="injurycause[]">:</td>
+  <td> Poison(Non-Drug)		:<input type="checkbox" value="Poison(Non-Drug)" name="injurycause[]">:</td>
+<tr>
+<tr>
+  <td> Bite			:<input type="checkbox" value="Bite" name="injurycause[]">:</td>
+  <td> Firearm(Self)	:<input type="checkbox" value="Firearm(Self-afflicetd)" name="injurycause[]">:</td>
+  <td> Radiation		:<input type="checkbox" value="Radiation" name="injurycause[]">:</td>
+<tr>
+<tr>
+  <td> Chemical Exposure	:<input type="checkbox" value="chemical exposure" name="injurycause[]">:</td>
+  <td> Firearm(Accidental)	:<input type="checkbox" value="Firearm(Accidental)" name="injurycause[]">:</td>
+  <td> Sexual Assault		:<input type="checkbox" value="Sexual Assault" name="injurycause[]">:</td>
+<tr>
+<tr>
+  <td> Child Battering		:<input type="checkbox" value="Child Battering" name="injurycause[]">:</td>
+  <td> Firearm(Assault)		:<input type="checkbox" value="Firearm(Assault)" name="injurycause[]">:</td>
+  <td> Smoke Inhalation		:<input type="checkbox" value="Smoke Inhalation" name="injurycause[]">:</td>
+<tr>
+<tr>
+  <td> Drowning			:<input type="checkbox" value="Drowning" name="injurycause[]">:</td>
+  <td> Lightening		:<input type="checkbox" value="Lightening" name="injurycause[]">:</td>
+  <td> Stabbing			:<input type="checkbox" value="Stabbing" name="injurycause[]">:</td>
+<tr>
+<tr>
+  <td> Drug Ingestion 		:<input type="checkbox" value="Drug Ingestion" name="injurycause[]">:</td>
+  <td> Machine Injury		:<input type="checkbox" value="Machine Injury" name="injurycause[]">:</td>
+  <td> Stings(Plant/Animal)	:<input type="checkbox" value="Stings(Plant/Animal)" name="injurycause[]">:</td>
+<tr>
+<tr>
+  <td> Electrocution		:<input type="checkbox" value="Electrocution" name="injurycause[]">:</td>
+  <td> Mechanical Suffocation	:<input type="checkbox" value="Mechanical Suffocation" name="injurycause[]">:</td>
+  <td> Water Transport		:<input type="checkbox" value="Water Transport" name="injurycause[]">:</td>
+<tr>
+<tr>
+  <td> Excessive cold		:<input type="checkbox" value="Excessive Cold" name="injurycause[]">:</td>
+  <td> Motor Vehicle		:<input type="checkbox" value="Motor Vehicle" name="injurycause[]">:</td>
+  <td> Unknown			:<input type="checkbox" value="unknown" name="injurycause[]">:</td>
+<tr>
+
+</table class="center">
+
+<br></br>
+
+<table class="center">
+<tr>
+<th colspan="5">PROVISIONAL DIAGNOSIS</th>
+</tr>
+<tr>
+  <td> Abdominal Pain	:<input type="checkbox" value="Abdominal Pain" name="diagnosis[]">:</td>
+  <td> Chest Pain	:<input type="checkbox" value="Chest Pain" name="diagnosis[]">:</td>
+  <td> Headache		:<input type="checkbox" value="Headache" name="diagnosis[]">:</td>
+  <td> Dehydration	:<input type="checkbox" value="Dehydration" name="diagnosis[]">:</td>
+  <td> Stroke/CVA/TIA	:<input type="checkbox" value="Stroke/CVA/TIA" name="diagnosis[]">:</td>
+</tr>
+<tr>
+  <td> Airway Obstruction:<input type="checkbox" value="Airway Obstruction" name="diagnosis[]">:</td>
+  <td> CCF		 :<input type="checkbox" value="CCF" name="diagnosis[]">:</td>
+  <td> Hypertension	 :<input type="checkbox" value="Hypertension" name="diagnosis[]">:</td>
+  <td> REspiratory Arrest:<input type="checkbox" value="Respiratory Arrest" name="diagnosis[]">:</td>
+  <td> Syncope/Fainting  :<input type="checkbox" value="Syncope/Fainting" name="diagnosis[]">:</td>
+</tr>
+<tr>
+  <td> Allergic Reaction:<input type="checkbox" value="Allergic Reaction" name="diagnosis[]">:</td>
+  <td> CLD		:<input type="checkbox" value="CLD" name="diagnosis[]">:</td>
+  <td> Hypoglycemia	:<input type="checkbox" value="Hypoglycemia" name="diagnosis[]">:</td>
+  <td> Respiratory Distress:<input type="checkbox" value="Respiratory Distress" name="diagnosis[]">:</td>
+  <td> Trauma/Burn	:<input type="checkbox" value="Trauma/Burn" name="diagnosis[]">:</td>
+</tr>
+<tr>
+  <td> Altered LOC	 :<input type="checkbox" value="Altered LOC" name="diagnosis[]">:</td>
+  <td> Electrocution	 :<input type="checkbox" value="Electrocution" name="diagnosis[]">:</td>
+  <td> Shock		 :<input type="checkbox" value="Shock" name="diagnosis[]">:</td>
+  <td> Seizure		 :<input type="checkbox" value="Seizure" name="diagnosis[]">:</td>
+  <td> Vaginal Hemorrhage:<input type="checkbox" value="Vaginal Hemorrhage" name="diagnosis[]">:</td>
+</tr>
+<tr>
+  <td> Behavioral/Psych :<input type="checkbox" value="Behavioral/Psych" name="diagnosis[]">:</td>
+  <td> Fever		:<input type="checkbox" value="Fever" name="diagnosis[]">:</td>
+  <td> Obvious Death	:<input type="checkbox" value="Obvious Death" name="diagnosis[]">:</td>
+  <td> Sexual Assault	:<input type="checkbox" value="Sexual Assault" name="diagnosis[]">:</td>
+  <td> Unknown		:<input type="checkbox" value="Unknown" name="diagnosis[]">:</td>
+</tr>
+<tr>
+  <td> Cardiac Arrest	  :<input type="checkbox" value="Cardiac Arrest" name="diagnosis[]">:</td>
+  <td> For Dialysis/MRI/CT:<input type="checkbox" value="For Dialysis/CT/MRI" name="diagnosis[]">:</td>
+  <td> Poisoning	  :<input type="checkbox" value="Poisoning" name="diagnosis[]">:</td>
+  <td> Toxic Inhalation	  :<input type="checkbox" value="Toxic Inhalation" name="diagnosis[]">:</td>
+  <td> Simple Shifting	  :<input type="checkbox" value="Simple Shifting" name="diagnosis[]">:</td>
+</tr>
+<tr>
+  <td> Cardiac(Rhythmic)		:<input type="checkbox" value="Cardiac Rhythmic" name="diagnosis[]">:</td>
+  <td> GI Bleed			     	:<input type="checkbox" value="GI Bleed" name="diagnosis[]">:</td>
+  <td> Pregnancy/Obstructive Delivery	:<input type="checkbox" value="Pregnancy/Obstructive Delivery" name="diagnosis[]">:</td>
+  <td> Stings/Bites			:<input type="checkbox" value="Stings/Bites" name="diagnosis[]">:</td>
+  <td> Others,Specify: <input type="text" size="12" maxlength="12" name="diagnosis[]"> </td>
+</tr>
+</table>
+
+
+<br></br>
+<strong>Please, Provide a valid email Address below. The email provided will receive an email-alert from "ali@1stest.co.uk". Please make sure either this email is 
+set as safe or check for the email-alert in the spam/junk folder of the provided address. Please note that, this App can also be used without providing email
+address. Just submit the form, to go to the summary page. </strong>
+<br> </br>
+<strong>EMAIL </strong><input class="center" type="text" size="30" maxlength="30" name="email">:<br />
+
+<br> </br>
+<input type="submit">
+
+</center>
+</form>
+</body>
+</html>

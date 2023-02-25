@@ -1,0 +1,22 @@
+td, th {
+  width: 10rem;
+  height: 2rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+th {
+  background: lightblue;
+  border-color: white;
+}
+body {
+  padding: 1rem;
+}
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+}
+div.boxed 	{
+	border: 1px solid green ;
+	font-size: 50rem;
+}
+
